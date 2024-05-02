@@ -36,12 +36,13 @@ function Login() {
 
     return (
         <>
-            <div className="bg-red-100 flex justify-center">
-                <div className='container grid grid-cols-2 text-black'>
-                    <form onSubmit={login}>
+            <form onSubmit={login}>
+                <div className="bg-red-100 flex justify-center">
+                    <div className='container grid grid-cols-2 text-black'>
+
                         <div className="flex flex-col gap-4 items-center justify-center py-4 " >
                             <h2 className='text-4xl mb-5'>Faça o Login:</h2>
-                            <form>
+                            <div>
                                 <label className='text-2xl mr-5'>Nome:</label>
                                 <input type="text"
                                     id="usuario"
@@ -50,8 +51,8 @@ function Login() {
                                     className="border-2 border-slate-700 rounded p-2"
                                     value={UsuarioLogin.usuario}
                                     onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)} />
-                            </form>
-                            <form>
+                            </div>
+                            <div>
                                 <label className='text-2xl mr-5'>Senha:</label>
                                 <input type="password"
                                     id="senha"
@@ -60,9 +61,10 @@ function Login() {
                                     className="border-2 border-slate-700 rounded p-2"
                                     value={UsuarioLogin.senha}
                                     onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)} />
-                            </form>
+                            </div>
                             <div className="flex justify-around gap-4">
-                                <button type='submit' className="rounded bg-indigo-400 hover:bg-indigo-900 text-white w-1/2 py-2 px-6 flex justify-center">
+                                <button type='submit'
+                                    className="rounded bg-indigo-400 hover:bg-indigo-900 w-[75px] p-2 text-white flex justify-center">
                                     {isLoading ? <RotatingLines
                                         strokeColor="white"
                                         strokeWidth="5"
@@ -78,13 +80,14 @@ function Login() {
                                 <Link to='/cadastrar' className='hover:underline'> cadastre-se.</Link>
                             </div>
                         </div>
-                    </form>
-                    <div className="flex justify-center ">
-                        <img src={LoginLogo} alt="" className='' />
 
+                        <div className="flex justify-center ">
+                            <img src={LoginLogo} alt="" className='' />
+
+                        </div>
                     </div>
                 </div>
-            </div>
+            </form>
         </>
     );
 }
