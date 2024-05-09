@@ -15,7 +15,7 @@ function Home() {
 
                         <div className="flex justify-around gap-4">
                             <ModalPostagem />
-                            <button className='rounded bg-white text-blue-800 py-2 px-4'>Ver postagens</button>
+                            <Link to='/postagens' className='rounded bg-white text-blue-800 py-2 px-4 hover:underline'>Postagens</Link>
                         </div>
                     </div>
 

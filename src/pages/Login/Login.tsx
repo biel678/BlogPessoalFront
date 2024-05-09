@@ -77,7 +77,7 @@ function Login() {
                             </div>
                             <div>
                                 Se não tem login ainda clique em
-                                <Link to='/cadastrar' className='hover:underline'> cadastre-se.</Link>
+                                <Link to='/cadastrar' className='text-indigo-600 hover:underline'> cadastre-se.</Link>
                             </div>
                         </div>
 

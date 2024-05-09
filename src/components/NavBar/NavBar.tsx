@@ -3,20 +3,19 @@ import { Link, useNavigate } from 'react-router-dom'
 import { AuthContext } from '../../context/AuthContext'
 
 function Navbar() {
-
   let navigate = useNavigate()
 
-  const { usuario, handleLogout } = useContext(AuthContext)
+    const { usuario, handleLogout } = useContext(AuthContext)
 
-  function logout() {
-    handleLogout()
-    alert('Usuário deslogado com sucesso')
-    navigate('/login')
-  }
+    function logout() {
+        handleLogout()
+        alert('Usuário deslogado com sucesso')
+        navigate('/login')
+    }
 
-  let navbarComponent
+    let navbarComponent
 
-  if(usuario.token !== "") {
+    if(usuario.token !== "") {
       navbarComponent = (
         <div className='w-full bg-indigo-300 text-white flex justify-center py-4'>
           <div className="container flex justify-between text-lg">
@@ -33,6 +32,7 @@ function Navbar() {
         </div>
       )
     }
+
   return (
     <>
       {navbarComponent}
@@ -40,4 +40,4 @@ function Navbar() {
   )
 }
 
-export default Navbar;
+export default Navbar
