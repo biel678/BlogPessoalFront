@@ -12,6 +12,7 @@ import DeletarTema from './components/Temas/DeletarTema';
 import ListaPostagens from './components/postagens/ListaPostagens';
 import FormularioPostagem from './components/postagens/FormularioPostagem';
 import DeletarPostagem from './components/postagens/DeletarPostagem';
+import Perfil from './pages/Perfil/Perfil';
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
         <Navbar />
         <div className='min-h-[80vh]'>
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Login />} />
             <Route path="/home" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/cadastrar" element={<Cadastro />} />
@@ -32,6 +33,7 @@ function App() {
             <Route path="/cadastroPostagem" element={<FormularioPostagem />} />
             <Route path="/editarPostagem/:id" element={<FormularioPostagem />} />
             <Route path="/deletarPostagem/:id" element={<DeletarPostagem />} />
+            <Route path="/perfil" element={<Perfil />} />
           </Routes>
         </div>
         <Footer />
